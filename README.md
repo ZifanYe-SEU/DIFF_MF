@@ -26,15 +26,17 @@ The code has been tested with Python 3.8 and PyTorch 1.10.
 
 ```bash
 # 1. Create a conda environment
-conda create -n fusion python=3.8
-conda activate fusion
+conda create -n diffmf python=3.8
+conda activate diffmf
 
 # 2. Install dependencies
 pip install -r requirements.txt
+```
 
-## data preparation
+## 📂 Data Preparation
 Please organize your dataset as follows. Note: Ensure that the Visible and Infrared images are strictly aligned (registered) and have the same filenames.
 
+```
 Project_Root/
 ├── dataset/
 │   ├── train/
@@ -51,6 +53,14 @@ Project_Root/
 │       └── MSRS/           # Test Dataset 2
 │           ├── vi/
 │           └── ir/
+```
 
+## 🚀 Usage
+
+## 📊 Results
+
+## 🤝 Citation
+
+## 📧 Contact
 
 
