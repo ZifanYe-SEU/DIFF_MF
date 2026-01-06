@@ -1,30 +1,55 @@
-# DIFF_MF
-official codes for DIFF_MF
-
-# [论文标题] (Title of the Paper)
+# [论文标题] (Official PyTorch Implementation)
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/xxxx.xxxxx)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Pytorch](https://img.shields.io/badge/PyTorch-%3E=1.8.0-orange)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Framework](https://img.shields.io/badge/PyTorch-%3E%3D1.8.0-orange)](https://pytorch.org/)
+[![Stars](https://img.shields.io/github/stars/[GithubUsername]/[RepoName].svg?style=social)](https://github.com/[GithubUsername]/[RepoName])
 
-这是论文 **"[论文标题]"** 的官方 PyTorch/TensorFlow 实现代码。
-> **作者**: [作者1], [作者2], [作者3]...
-> **发表于**: [会议/期刊名称 (e.g., CVPR 2024, IEEE TNNLS)]
+This repository contains the official PyTorch implementation of the paper:
+**"[论文标题]"** (Accepted by [会议/期刊名称, e.g., CVPR 2025 / IEEE TNNLS])
 
-## 📝 摘要 (Abstract)
-在这里粘贴论文的摘要。简单介绍这篇论文提出了什么方法，解决了什么核心问题。
+> **Authors**: [作者1], [作者2], [作者3]...
+> **Affiliation**: [您的学校或实验室名称]
 
-![Network Architecture](figures/architecture.png)
-*图 1: 我们提出的 [模型名称] 整体架构图。*
+## 📢 News
+- **[2026-01-06]**: Code and pre-trained models are released!
+- **[Date]**: The paper is accepted by [Conference/Journal].
 
-## 🔨 环境安装 (Installation)
+## 📜 Abstract
+[在此处粘贴您的论文摘要。简要描述您提出的方法如何解决红外与可见光融合中的关键问题（如热目标提取、纹理保留、光照不平衡等）。]
 
-建议使用 Conda 创建虚拟环境：
+![Network Architecture](assets/architecture.png)
+*Figure 1: The overall architecture of our proposed [模型名称].*
+
+## 🔨 Requirements
+The code has been tested with Python 3.8 and PyTorch 1.10.
 
 ```bash
-# 创建虚拟环境
-conda create -n [env_name] python=3.8
-conda activate [env_name]
+# 1. Create a conda environment
+conda create -n fusion python=3.8
+conda activate fusion
 
-# 安装依赖
+# 2. Install dependencies
 pip install -r requirements.txt
+
+Please organize your dataset as follows. Note: Ensure that the Visible and Infrared images are strictly aligned (registered) and have the same filenames.
+
+Project_Root/
+├── dataset/
+│   ├── train/
+│   │   ├── vi/             # Visible images (Grayscale or RGB)
+│   │   │   ├── 1.jpg
+│   │   │   └── ...
+│   │   └── ir/             # Infrared images (Grayscale)
+│   │       ├── 1.jpg
+│   │       └── ...
+│   └── test/
+│       ├── TNO/            # Test Dataset 1
+│       │   ├── vi/
+│       │   └── ir/
+│       └── MSRS/           # Test Dataset 2
+│           ├── vi/
+│           └── ir/
+
+
+
