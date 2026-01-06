@@ -32,6 +32,7 @@ conda activate fusion
 # 2. Install dependencies
 pip install -r requirements.txt
 
+## data preparation
 Please organize your dataset as follows. Note: Ensure that the Visible and Infrared images are strictly aligned (registered) and have the same filenames.
 
 Project_Root/
