@@ -40,12 +40,12 @@ Please organize your dataset as follows. Note: Ensure that the Visible and Infra
 Project_Root/
 ├── dataset/
 │   ├── train/
-│   │   ├── vi/             # Visible images (Grayscale or RGB)
-│   │   │   ├── 1.jpg
-│   │   │   └── ...
-│   │   └── ir/             # Infrared images (Grayscale)
-│   │       ├── 1.jpg
-│   │       └── ...
+│   │   ├── M3FD/           
+│   │   │   ├── vi/   # Visible images (Grayscale or RGB) 
+│   │   │   │   ├── 1.jpg
+│   │   │   │   └── ...
+│   │   │   └── ir/ 
+│   │   └── ...     
 │   └── test/
 │       ├── TNO/            # Test Dataset 1
 │       │   ├── vi/
