@@ -8,8 +8,9 @@
 This repository contains the official PyTorch implementation of the paper:
 **"DIFF-MF: A Difference-Driven Channel-Spatial State Space Model for Multi-Modal Image Fusion"** 
 <!-- TODO:(Accepted by [会议/期刊名称, e.g., CVPR 2025 / IEEE TNNLS]) -->
-> **Authors**: [作者1], [作者2], [作者3]...
-> **Affiliation**: [您的学校或实验室名称]
+> **Authors**: Yiming Sun, Zifan Ye, Qinghua Hu, Pengfei Zhu
+
+> **Affiliation**: the School of Automation, Southeast University, Nanjing, the School of Artificial Intelligence, Tianjin University, Tianjin
 
 ## 📢 News
 <!-- TODO:- **[2026-01-07]**: Code and pre-trained models are released!) -->
