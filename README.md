@@ -1,4 +1,4 @@
-# [论文标题] (Official PyTorch Implementation)
+# DIFF-MF: A Difference-Driven Channel-Spatial State Space Model for Multi-Modal Image Fusion 
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/xxxx.xxxxx)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -6,17 +6,16 @@
 [![Stars](https://img.shields.io/github/stars/[GithubUsername]/[RepoName].svg?style=social)](https://github.com/[GithubUsername]/[RepoName])
 
 This repository contains the official PyTorch implementation of the paper:
-**"[论文标题]"** (Accepted by [会议/期刊名称, e.g., CVPR 2025 / IEEE TNNLS])
-
+**"DIFF-MF: A Difference-Driven Channel-Spatial State Space Model for Multi-Modal Image Fusion"** 
+<!-- TODO:(Accepted by [会议/期刊名称, e.g., CVPR 2025 / IEEE TNNLS]) -->
 > **Authors**: [作者1], [作者2], [作者3]...
 > **Affiliation**: [您的学校或实验室名称]
 
 ## 📢 News
-- **[2026-01-06]**: Code and pre-trained models are released!
-- **[Date]**: The paper is accepted by [Conference/Journal].
-
+<!-- TODO:- **[2026-01-07]**: Code and pre-trained models are released!) -->
+<!-- TODO:- **[Date]**: The paper is accepted by [Conference/Journal].) -->
 ## 📜 Abstract
-[在此处粘贴您的论文摘要。简要描述您提出的方法如何解决红外与可见光融合中的关键问题（如热目标提取、纹理保留、光照不平衡等）。]
+Multi-modal image fusion aims to integrate complementary information from multiple source images to produce high-quality fused images with enriched content. Although existing approaches based on state space model have achieved satisfied performance with high computational efficiency, they tend to either over-prioritize infrared intensity at the cost of visible details, or conversely, preserve visible structure while diminishing thermal target salience. To overcome these challenges, we propose DIFF-MF, a novel difference-driven channel-spatial state space model for multi-modal image fusion. Our approach leverages feature discrepancy maps between modalities to guide feature extraction, followed by a fusion process across both channel and spatial dimensions. In the channel dimension, a channel-exchange module enhances channel-wise interaction through cross-attention dual state space modeling, enabling adaptive feature reweighting. In the spatial dimension, a spatial-exchange module employs cross-modal state space scanning to achieve comprehensive spatial fusion. By efficiently capturing global dependencies while maintaining linear computational complexity, DIFF-MF effectively integrates complementary multi-modal features. Experimental results on the driving scenarios and low-altitude UAV datasets demonstrate that our method outperforms existing approaches in both visual quality and quantitative evaluation.
 
 ![Network Architecture](assets/architecture.png)
 *Figure 1: The overall architecture of our proposed [模型名称].*
