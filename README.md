@@ -2,7 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/xxxx.xxxxx)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Framework](https://img.shields.io/badge/PyTorch-%3E%3D1.8.0-orange)](https://pytorch.org/)
+[![Framework](https://img.shields.io/badge/PyTorch-%3E%3D2.1.0-orange)](https://pytorch.org/)
 [![Stars](https://img.shields.io/github/stars/[GithubUsername]/[RepoName].svg?style=social)](https://github.com/[GithubUsername]/[RepoName])
 
 This repository contains the official PyTorch implementation of the paper:
@@ -21,15 +21,26 @@ Multi-modal image fusion aims to integrate complementary information from multip
 *Figure 1: The overall architecture of our proposed [模型名称].*
 
 ## 🔨 Requirements
-The code has been tested with Python 3.8 and PyTorch 1.10.
+The code has been tested with Python 3.8 and PyTorch 2.1.0
 
 ```bash
 # 1. Create a conda environment
 conda create -n diffmf python=3.8
 conda activate diffmf
 
-# 2. Install dependencies
-pip install -r requirements.txt
+# 2. Install main dependencies
+conda install cudatoolkit==11.8 -c nvidia
+pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
+
+# 3. Install mamba
+# you should first download the offical whl of mamba form the https://github.com/state-spaces/mamba/releases and https://github.com/Dao-AILab/causal-conv1d/releases
+# then use pip to install the whl you downloaded just now
+# then run the command below
+cd selective_scan
+pip install .
+
+# 4. Install other dependencies
+pip install -r requirements # note that some packages may need to be install dependently
 ```
 
 ## 📂 Data Preparation
@@ -57,6 +68,14 @@ Project_Root/
 ```
 
 ## 🚀 Usage
+Train models
+```
+python -m torch.distributed.launch --nproc_per_node=2 --master_port=1234 train_DIFFMF.py --opt options/DIFFMF/DIFFMF.json  --dist True
+```
+Test models
+```
+python test_DIFFMF.py --model_path=./ckpt --iter_number=48000 --dataset=VIF --A_dir=ir  --B_dir=vi
+```
 
 ## 📊 Results
 
