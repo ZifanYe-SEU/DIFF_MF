@@ -69,13 +69,16 @@ Project_Root/
 ```
 
 ## 🚀 Usage
+checkpoints can be downloaded with the links below
+
+
 Train models
 ```
 python -m torch.distributed.launch --nproc_per_node=2 --master_port=1234 train_DIFFMF.py --opt options/DIFFMF/DIFFMF.json  --dist True
 ```
 Test models
 ```
-python test_DIFFMF.py --model_path=./ckpt --iter_number=48000 --dataset=VIF --A_dir=ir  --B_dir=vi
+python test_DIFFMF.py --model_path=./ckpt --iter_number=10000 --dataset=VIF --A_dir=ir  --B_dir=vi
 ```
 
 <!-- TODO:## 📊 Results -->
