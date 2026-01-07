@@ -18,8 +18,8 @@ This repository contains the official PyTorch implementation of the paper:
 ## 📜 Abstract
 Multi-modal image fusion aims to integrate complementary information from multiple source images to produce high-quality fused images with enriched content. Although existing approaches based on state space model have achieved satisfied performance with high computational efficiency, they tend to either over-prioritize infrared intensity at the cost of visible details, or conversely, preserve visible structure while diminishing thermal target salience. To overcome these challenges, we propose DIFF-MF, a novel difference-driven channel-spatial state space model for multi-modal image fusion. Our approach leverages feature discrepancy maps between modalities to guide feature extraction, followed by a fusion process across both channel and spatial dimensions. In the channel dimension, a channel-exchange module enhances channel-wise interaction through cross-attention dual state space modeling, enabling adaptive feature reweighting. In the spatial dimension, a spatial-exchange module employs cross-modal state space scanning to achieve comprehensive spatial fusion. By efficiently capturing global dependencies while maintaining linear computational complexity, DIFF-MF effectively integrates complementary multi-modal features. Experimental results on the driving scenarios and low-altitude UAV datasets demonstrate that our method outperforms existing approaches in both visual quality and quantitative evaluation.
 
-![Network Architecture](assets/architecture.png)
-*Figure 1: The overall architecture of our proposed [模型名称].*
+![Network Architecture](framework.png)
+*Figure 1: The overall architecture of our proposed DIFF-MF.*
 
 ## 🔨 Requirements
 The code has been tested with Python 3.8 and PyTorch 2.1.0
