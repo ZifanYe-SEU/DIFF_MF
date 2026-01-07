@@ -44,7 +44,9 @@ Project_Root/
 │   │   │   ├── vi/   # Visible images (Grayscale or RGB) 
 │   │   │   │   ├── 1.jpg
 │   │   │   │   └── ...
-│   │   │   └── ir/ 
+│   │   │   └── ir/
+│   │   │   │   ├── 1.jpg
+│   │   │   │   └── ...
 │   │   └── ...     
 │   └── test/
 │       ├── TNO/            # Test Dataset 1
